@@ -25,14 +25,14 @@ class Employer{
   }
   mealTotals(){
     let total = {}
-    this.meals().forEach(function(meal)){
+    this.meals().forEach(function(meal){
       total[meal.id] = 0
       this.deliveries().forEach(function(delivery){
         if (delivery.meal() === meal){
           object[meal.id] += 1
         }
       })
-    }
+    })
     return total
 }
 class Customer{
