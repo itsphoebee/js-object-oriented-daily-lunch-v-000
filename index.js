@@ -24,7 +24,8 @@ class Employer{
   }
 
   meals(){
-    return this.deliveries().map(delivery => {
+    const myMeals = []
+    this.deliveries().map(delivery => {
       return delivery.meal();
     })
   }
@@ -75,7 +76,7 @@ class Meal{
     return store.deliveries.filter(delivery => delivery.mealId === this.id)
   }
   customers(){
-    return this.deliveries().map(delivery => {
+    this.deliveries().map(delivery => {
       return delivery.customer()
     })
   }
