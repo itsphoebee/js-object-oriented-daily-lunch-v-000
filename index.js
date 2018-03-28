@@ -99,3 +99,9 @@ class Delivery{
     return store.meals.find(meal => meal.id === this.mealId)
   }
 }
+
+Array.prototype.unique = function() {
+  return this.filter(function (value, index, self) {
+    return self.indexOf(value) === index;
+  });
+}
