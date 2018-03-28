@@ -34,6 +34,7 @@ class Employer{
       })
     })
     return total
+  }
 }
 class Customer{
   constructor(name, employer){
