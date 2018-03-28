@@ -25,8 +25,8 @@ class Employer{
 
   meals(){
     const myMeals = []
-    this.deliveries().map(delivery => {
-      return delivery.meal();
+    this.deliveries().forEach(delivery => {
+      return delivery.meal() if (!myMeals.includes(deliver.meal()));
     })
   }
   mealTotals(){
