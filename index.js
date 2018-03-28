@@ -18,15 +18,11 @@ class Employer{
       return customer.deliveries();
     }
   }
-  meals() {
-     let array = []
-     this.deliveries().forEach(function (delivery) {
-       if (!array.includes(delivery.meal())) {
-         array.push(delivery.meal())
-       }
-     })
-     return array
-   }
+  meals(){
+    return this.deliveries().map(delivery => {
+      return delivery.meal();
+    })
+  }
   mealTotals(){
     let total = {}
     this.meals().forEach(function(meal){
