@@ -31,8 +31,8 @@ class Employer{
         if (delivery.meal() === meal){
           total[meal.id] += 1
         }
-      }).bind(this)
-    })
+      })
+    }.bind(this))
     return total
   }
 }
