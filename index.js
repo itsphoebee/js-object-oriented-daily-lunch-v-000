@@ -25,9 +25,9 @@ class Employer{
 
   meals(){
     let myMeals = []
-    this.deliveries().forEach(delivery => {
+    this.deliveries().forEach(function(delivery) {
       if (!myMeals.includes(delivery.meal())){
-        myMeals.push delivery.meal();
+        myMeals.push(delivery.meal());
       }
     })
     return myMeals
