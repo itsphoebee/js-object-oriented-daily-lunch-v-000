@@ -24,7 +24,7 @@ class Employer{
     })
   }
   mealTotals(){
-    
+
   }
 }
 class Customer{
@@ -89,6 +89,6 @@ class Delivery{
     return store.meals.find(meal => meal.id === this.mealId)
   }
   mealTotals(){
-    return self.meal().keys
+    return self.meal().Object.keys()
   }
 }
