@@ -14,10 +14,10 @@ class Employer{
     return store.customers.filter(customer => customer.employerId === this.id)
   }
   deliveries(){
-    let array = []
-      this.employees().forEach(employee => {array = [...employee.deliveries(), ...array]})
-      return array
+    for (const customer of this.employees()){
+      return customer.deliveries();
     }
+  }
 
   meals(){
     return this.deliveries().map(delivery => {
