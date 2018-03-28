@@ -30,6 +30,7 @@ class Employer{
         myMeals.push delivery.meal();
       }
     })
+    return myMeals
   }
   mealTotals(){
     let total = {}
