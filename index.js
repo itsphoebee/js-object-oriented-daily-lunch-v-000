@@ -14,6 +14,7 @@ class Employer{
     return store.customers.filter(customer => customer.employerId === this.id)
   }
   deliveries(){
+    const employeeDeliveries = []
     for (const customer of this.employees()){
       return customer.deliveries();
     }
@@ -21,7 +22,7 @@ class Employer{
 
   meals(){
     return this.deliveries().map(delivery => {
-      return delivery.meal().unique();
+      return delivery.meal();
     })
   }
   mealTotals(){
@@ -98,10 +99,4 @@ class Delivery{
   meal(){
     return store.meals.find(meal => meal.id === this.mealId)
   }
-}
-
-Array.prototype.unique = function() {
-  return this.filter(function (value, index, self) {
-    return self.indexOf(value) === index;
-  });
 }
