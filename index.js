@@ -89,6 +89,6 @@ class Delivery{
     return store.meals.find(meal => meal.id === this.mealId)
   }
   mealTotals(){
-    return self.meal().Object.keys()
+    return self.meals().Object.keys()
   }
 }
